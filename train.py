@@ -26,10 +26,7 @@ spm_path.mkdir(exist_ok=True)
 out.mkdir(exist_ok=True)
 
 ## reading train csv data
-# df = pd.read_csv("data_ULMFIT.csv")
-# df = df.sample(frac=1).reset_index(drop=True)[:10000]
-sample = pd.read_csv("sample_ULMFIT.csv")
-
+df = pd.read_csv("data_ULMFIT.csv")
 
 ## using sentence piece tokenizer
 tok = SentencePieceTokenizer(lang=lang, max_vocab_sz=vocab_sz, cache_dir=spm_path)
