@@ -43,7 +43,7 @@ learn = language_model_learner(dls, AWD_LSTM, drop_mult=0.1, wd=0.1, pretrained=
 
 lr = 2e-4
 lr *= bs/48  # Scale learning rate by batch size
-num_epochs = 15
+num_epochs = 10
 ## fitting the model
 learn.unfreeze()
 learn.fit_one_cycle(num_epochs, lr,moms=(0.8, 0.7, 0.8))
